@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Email with Speech Recognition</title>
+    <link rel="stylesheet" href="speech.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">IRIS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link start" href="#">Start <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link stop" href="#">Stop</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link instructionBtn" href="#">Insruction</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link clear" href="#">Clear</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <h3 style='text-align: center'>Send Email with Speech</h3>
+    <div class="main">
+    </div>
+    <div class='speech'>Click start button &amp; start speaking!</div>
+    <span class="statusBar" data-text='Listening...'></span>
+    <br/>
+    <div class="instructionContainer hide" tabindex="-1">
+      <button class='instructionClose' tabindex="-1">X</button>
+      <h3>Instructions:</h3>
+      <ol
+        <li>Click Start button and click 'allow' to use microphone if popup comes up.</li>
+        <li>After allowing, just start talking means your subject text.</li>
+        <li>Speaking Commands:
+          <ul>
+            <li>For comma(,) say <mark class='markText'>'comma'</mark>.</li>
+            <li>For fullstop(.) say <mark class='markText'>'full stop'</mark>.</li>
+            <li>For exclamation(!) say <mark class='markText'>'exclamation sign'</mark>.</li>
+            <li>For question mark(?) say <mark class='markText'>'question mark'</mark>.</li>
+            <li>For delete something, say <mark class='markText'>'delete now'</mark>.</li>
+          </ul>
+        </li>
+        <li>After completing your subject, say <mark class='markText'>'line break'</mark> to break the line for your body content. After break, the body content part will start.</li>
+        <li>Say <mark class="markText">'paragraph break'</mark> for provide break between two lines.</li>
+        <li>When everything's done means after completing your body part, say <mark class='markText'>'send email'</mark> to open your default email provider(wheather it's a app or gmail account) and send mail specifically via gmail, just say <mark class="markText">send gmail</mark> and it'll open gmail.com and then just edit your recipient's email address and send email.</li>
+        <li>If you send email without providing 'line break' command (see point 4), then subject and body both will take the same content. </li>
+      </ol>
+      <h3>Background Color Change Commands:</h3>
+      <pre style='white-space: pre-wrap;'>
+    {
+      <span>Green : </span><mark class='markText'>'green'</mark><br>
+      <span>Purple : </span><mark class='markText'>'purple'</mark><br>
+      <span>Yellow : </span><mark class='markText'>'yellow'</mark><br>
+      <span>White : </span><mark class='markText'>'white'</mark><br>
+      <span>Tomato : </span><mark class='markText'>'tomato'</mark><br>
+      <span>Tan : </span><mark class='markText'>'tan'</mark><br>
+      <span>Thistle : </span><mark class='markText'>'thistle'</mark><br>
+      <span>Wheat : </span><mark class='markText'>'wheat'</mark><br>
+      <span>Lime : </span><mark class='markText'>'lime'</mark><br>
+      <span>Black : </span><mark class='markText'>'black'</mark>
+    }
+    </pre>
+      <small class='smallText'><span>*</span> Yellow mark texts are the commands.</small>
+    </div>
+    <div class="notSupport">
+      <p><span>❌</span><span>Not Supported</span></p>
+      <p>Speech Recognition Only Working On Chrome</p>
+      <p>Try To Open This On Chrome</p>
+    </div>
+    <script src="speech.min.js" type="text/javascript"></script>
+  </body>
+
+</html>

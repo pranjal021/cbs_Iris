@@ -1,16 +1,7 @@
-IRIS showcases the ability to write code, by speaking to the machine. A demo has been given in the video which showcases a simple website to speak commands and it automatically writes your code.
-Our application identifies the type of command given and accordingly extracts important information such as keywords and entities to build the line of code. Currently it supports the code syntax of Python & Javascript.
+# Project Name: IRIS
 
-**Features:**
+IRIS is a web application which will help students who are new to programming, students who are experts in programming, software developers & specially abled people to code just by conversing with it & IRIS will write the code for them.
 
-**1.** Obtain Parallel clean code in JavaScript and Python.
+### This web application harnesses the power of Artificial Intelligence(AI) and Natural Language Proessing to convert natural language to code. We have used a JavaScript NLP like library Bravey to convert natural language to code just by conversing with the software. 
 
-**2.** Navigate through the code just by speech.
-
-**3.** Easily toggle between the languages; supports English as well as Hindi
-
-**4.** Support of Emacs and Vim key bindings.     
-
-**Algorithm visualizer** - For people who want to visualize algorithms for better understanding.           
-
-**Email** - Users can send email without having to type anything. They can simply speak the content and it will send an email to the receipent with the content.
+IRIS will allow newbies to code just by conversing with it because it is difficult for them to write the code. This will help them learn the syntax of two programming languages Javascript & python parallely.  It will also allow them to visualise various algorithms which will help them learn fast. IRIS will also help experts by increasing their speed of programming. They will be able to code faster because they just have to converse with it & hence they will be able to develop the applications faster. IRIS can also be used for sending emails just by speaking. People with injuries to their hands, or muscular dystrophy patients and specially-abled people will find IRIS beneficial because they will just have to converse with it & IRIS will write the code for them.
